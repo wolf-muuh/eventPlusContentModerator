@@ -123,10 +123,10 @@ builder.Services.AddCors(options =>
 
 //Habilita o serviço de moderador de conteudo do azure
 builder.Services.AddSingleton(provider => new ContentModeratorClient(
-    new ApiKeyServiceClientCredentials("f8377b316e774e058e28697edbea15ca"))
+    new ApiKeyServiceClientCredentials("ee5798c355784154a3f293b816c4a7d9"))
     {
-        Endpoint = "https://eventcontentmoderatormurilo.cognitiveservices.azure.com/"
-    }
+        Endpoint = "https://eventpluscontentmoderatormurilo.cognitiveservices.azure.com/"
+}
 );
 
 var app = builder.Build();
@@ -152,9 +152,6 @@ app.UseSwaggerUI(options =>
 });
 
 app.UseRouting();
-
-
-
 
 app.UseCors("CorsPolicy");
 
